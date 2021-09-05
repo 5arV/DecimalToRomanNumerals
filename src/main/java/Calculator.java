@@ -9,7 +9,7 @@ public class Calculator {
         while (value > 0) {
             Optional<RomanNumeral> numeral = findRange(value);
             if (numeral.isEmpty()) {
-                throw new IllegalArgumentException("invalid range for value: " + value);
+                throw new IllegalArgumentException("Ti si invalid: " + value);
             }
             builder.append(numeral.get().name());
             value = value - numeral.get().getDecimalValue();
